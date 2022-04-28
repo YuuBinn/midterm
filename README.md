@@ -1,7 +1,6 @@
 # Ford-Fulkerson Algorithm
 
 ## | 포드 풀커슨(Ford-Fulkerson) 알고리즘
-#
  - 네트워크 유량 알고리즘의 가장 기본적인 알고리즘
 
 
