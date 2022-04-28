@@ -35,10 +35,17 @@
 3.  찾은 경로 내 간선들의 잔여 용량이 가장 적은 값을 유량으로 흘려 보낸다.
 4.  더 이상의 경로를 찾을 수 없을 때까지 반복한다.
 
-
+예를 들면, 아래와 같은 예시가 있다.
 ![111](https://user-images.githubusercontent.com/101811119/165812754-7143b4ec-8df9-4d36-89ca-1831b6e0c485.png)
+먼저 깊이우선탐색(DFS)을 사용하여 증가경로를 찾는다.
+찾은 경로는 "S->A->B->T" 이고, 이때 흘려 보낼 수 있는 최대 유량은 1 이다.
+![2](https://user-images.githubusercontent.com/101811119/165820276-7b20b01d-e322-4dd3-8295-0e0793971bb5.png)
+이때, 유량의 대칭성(f(a,b)=-f(b,a))에 따라서 역간선을 표시하면 아래와 같다.
+![3](https://user-images.githubusercontent.com/101811119/165820391-fcee9188-7ffe-44bf-a84c-5ea6e6e94ee7.png)
+따라서, 새로운 경로인 "S->B->A->T"를 찾을 수 있고, 이때 흘려 보낼 수 있는 최대 유량은 1이다.
+![4](https://user-images.githubusercontent.com/101811119/165820399-6fad062c-879f-4bf7-84b6-3a67b632f576.png)
 
-
+-> 더 이상의 경로를 찾을 수 없으므로, 최대 유량은 1+1=2, 2가 된다.
 
 ## | 포드 풀커슨(Ford-Fulkerson) 알고리즘 코드 실행 결과
 #
