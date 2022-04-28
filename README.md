@@ -42,7 +42,7 @@
 
 
 
-#### EX) 아래와 같은 예시가 있다.
+- ex) 아래와 같은 예시가 있다.
 
 ![111](https://user-images.githubusercontent.com/101811119/165812754-7143b4ec-8df9-4d36-89ca-1831b6e0c485.png)
 
