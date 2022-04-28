@@ -37,6 +37,7 @@
 
 ![1](https://user-images.githubusercontent.com/101811119/165811934-d38d6871-480b-4e60-9ec8-44f2d3226803.png)
 
+![11](https://user-images.githubusercontent.com/101811119/165812574-3dfd3633-b9b6-478a-b0eb-819b2c485101.png)
 
 
 ## | 포드 풀커슨(Ford-Fulkerson) 알고리즘 코드 실행 결과
