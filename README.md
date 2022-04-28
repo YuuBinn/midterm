@@ -45,7 +45,7 @@
 #### ex) 
  아래와 같은 예시가 있다.
 
-![111](https://user-images.githubusercontent.com/101811119/165812754-7143b4ec-8df9-4d36-89ca-1831b6e0c485.png)
+![1](https://user-images.githubusercontent.com/101811119/165832692-e94ba0dd-6ae0-453e-a84e-cf2a1c51f0a1.png)
 
 먼저 깊이우선탐색(DFS)을 사용하여 증가경로를 찾는다.
 
@@ -65,4 +65,48 @@
 
 
 ## | 포드 풀커슨(Ford-Fulkerson) 알고리즘 성능 분석
+
+만약, 그래프가 아래와 같이 용량이 큰 상황을 분석해 본다면
+
+![11](https://user-images.githubusercontent.com/101811119/165832753-4d8215fb-6701-4812-b225-f92c107ae1aa.png)
+
+
+작동방식은 위에 적어둔 것을 참고한다.
+ "S->A->B->T" 경로, 최대 유량은 1이므로 아래와 같다.
+
+![22](https://user-images.githubusercontent.com/101811119/165832769-ee20e293-64a7-4546-8c17-100eef471959.png)
+
+
+역간선 작성, 이후 "S->B->A->T"경로, 최대 유량은 1이므로 아래와 같다.
+
+![33](https://user-images.githubusercontent.com/101811119/165832775-edda32e6-cf3a-41b5-a092-397ceee70d4d.png)
+
+
+이 과정을 10000번 반복해야 최대 유량 20000을 구할 수 있다.
+
+-> 용량이 크면 클수록 더 많이 반복하는 복잡한 과정이 된다.
+
+포드 풀커슨(Ford-Fulkerson) 알고리즘의 시간복잡도는 O((V+E)F).
+
+### | 에드몬드-카프(Edmonds-Karp) 알고리즘
+
+반면,  포드 풀커슨(Ford-Fulkerson) 알고리즘과 전체적인 과정은 비슷하지만, '깊이우선탐색(DFS)'이 아닌, '너비우선탐색(BFS)'을 사용하는 에드몬드-카프(Edmonds-Karp) 알고리즘으로 생각해 본다면
+
+"S->A->T"경로, 최대 유량 10000이므로 아래와 같다.
+
+![111](https://user-images.githubusercontent.com/101811119/165832790-4daaad97-78f2-40f0-bcee-f0cceb3b0714.png)
+
+
+이후, "S->B->T"경로, 최대 유량 10000이므로 아래와 같다.
+
+![222](https://user-images.githubusercontent.com/101811119/165832811-1e68872d-b877-4de1-951a-2a152a3ffbd0.png)
+
+에드몬드-카프(Edmonds-Karp) 알고리즘을 사용하면, 2번만 탐색하면, 최대 유량 20000을 찾아낸 것을 알 수 있다.
+
+#
+
+### |  포드 풀커슨(Ford-Fulkerson) 알고리즘과 에드몬드-카프(Edmonds-Karp) 알고리즘의 비교
+
+
+-> 위와 같은 상황에서, 용량이 커지면 커질수록 에드몬드-카프(Edmonds-Karp) 알고리즘이 더 효율적인 작동을 한다.
 
